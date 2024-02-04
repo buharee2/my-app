@@ -1,25 +1,21 @@
-* {
-  margin: 0 auto;
-  padding: 0;
-}
-
 body {
   font-family: 'Karla';
-}
+  margin: 0 auto;
+  width: 100%;
 
-.navbar li a {
-  display: inline-block;
-  padding: 5px;
-  margin: 0 5px 0 5px;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 5px;
 }
 
 .nav-links {
   display: flex;
-  justify-content: center;
+  padding: 1em;
   list-style-type: none;
+}
+
+.navbar li a {
+  padding: 5px;
+  margin: 0 5px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .navbar {
@@ -31,7 +27,6 @@ body {
 
 .nav-icons {
   display: none;
-  cursor: pointer;
 }
 
 li a:hover {
@@ -39,21 +34,54 @@ li a:hover {
   color: white;
 }
 
-.nav-links.visible {
-  display: flex;
-  flex-direction: column;
+.header {
+  background-color: #495E57;
+  padding: 40px 0;
+}
+
+.header section {
+  color: #EDEFEE;
+  padding: 10px 13%;
+}
+
+h2 {
+  color: #F4CE14;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 25;
+}
+
+.banner p {
+  font-size: 20px;
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #F4CE14;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.banner-img {
   position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: aliceblue;
-  align-items: center;
-  transition: all 3ms ease-in;
+  top: 15%;
+  right: 13%;
+  width: 400px;
+  border-radius: 16px;
 }
 
 @media only screen and (max-width: 768px) {
   .nav-icons {
     display: block;
+    cursor: pointer;
   }
 
   .nav-links {
@@ -62,6 +90,13 @@ li a:hover {
 
   .nav-links.visible {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
     background: aliceblue;
     z-index: 1000;
     padding: 20px 0;
@@ -69,6 +104,8 @@ li a:hover {
 
   .navbar{
     background:#fff;
-    padding: 15px 1%;
+    padding: 15px 4%;
   }
 }
+
+
