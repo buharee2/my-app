@@ -2,6 +2,7 @@ import logo from '../images/logo.svg';
 import humburgerMenu from '../images/humburgerMenu.svg';
 import cartIcon from '../images/cartIcon.svg';
 import React, { useEffect, useState, useRef } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Nav() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -39,12 +40,12 @@ function Nav() {
                     <a className='logo' href='/'><img  src={logo} alt='Logo' /></a>
                     <img className='nav-icons cart' src={cartIcon} alt='Cart' />
                 <ul  className={`nav-links ${menuOpen ? "visible" : ""}`}>
-                    <li><a href='/'>Home</a></li>
-                    <li><a href='#About'>About</a></li>
-                    <li><a href='#Menu'>Menu</a></li>
-                    <li><a href='#Reservation'>Reservation</a></li>
-                    <li><a href='#Order'>Order Online</a></li>
-                    <li><a href='#Login'>Login</a></li>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    <li><NavLink to='/About'>About</NavLink></li>
+                    <li><NavLink to='/Menu'>Menu</NavLink></li>
+                    <li><NavLink to='/Reservation'>Reservation</NavLink></li>
+                    <li><NavLink to='/Order'>Order</NavLink></li>
+                    <li><NavLink to='/Login'>Login</NavLink></li>
                 </ul>
             </nav>
         </>
