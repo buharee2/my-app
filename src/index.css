@@ -91,6 +91,28 @@ button {
   border-radius: 16px;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 17%;
+  margin-top: 100px;
+  border-top: #495E57 solid 1px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer li a {
+  padding: 4px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.footer li {
+  margin: 8px;
+}
+
 @media only screen and (max-width: 911px) {
   .banner-img {
     position: absolute;
@@ -133,6 +155,12 @@ button {
   .navbar{
     background:#fff;
     padding: 15px 7% 15px 5%;
+  }
+
+  .footer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: auto;
   }
 
   .header section {

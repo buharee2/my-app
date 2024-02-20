@@ -2,7 +2,7 @@ import logo from '../images/logo.svg';
 import humburgerMenu from '../images/humburgerMenu.svg';
 import cartIcon from '../images/cartIcon.svg';
 import React, { useEffect, useState, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 function Nav() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -37,15 +37,15 @@ function Nav() {
         <>
             <nav ref={navRef} className={`navbar ${menuOpen ? "Open" : ""}`}>
                     <img className='nav-icons menu' onClick={toggleMenu} src={humburgerMenu} alt='Menu' />
-                    <a className='logo' href='/'><img  src={logo} alt='Logo' /></a>
+                    <Link className='logo' to='/'><img  src={logo} alt='Logo' /></Link>
                     <img className='nav-icons cart' src={cartIcon} alt='Cart' />
                 <ul  className={`nav-links ${menuOpen ? "visible" : ""}`}>
                     <li><NavLink to='/'>Home</NavLink></li>
-                    <li><NavLink to='/About'>About</NavLink></li>
-                    <li><NavLink to='/Menu'>Menu</NavLink></li>
-                    <li><NavLink to='/Reservation'>Reservation</NavLink></li>
-                    <li><NavLink to='/Order'>Order</NavLink></li>
-                    <li><NavLink to='/Login'>Login</NavLink></li>
+                    <li><NavLink to='/about'>About</NavLink></li>
+                    <li><NavLink to='/menu'>Menu</NavLink></li>
+                    <li><NavLink to='/booking'>Reservation</NavLink></li>
+                    <li><NavLink to='/order'>Order</NavLink></li>
+                    <li><NavLink to='/login'>Login</NavLink></li>
                 </ul>
             </nav>
         </>
